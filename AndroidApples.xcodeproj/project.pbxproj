@@ -14,6 +14,8 @@
 		503B86241BE889A500B2E3C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 503B86231BE889A500B2E3C5 /* Images.xcassets */; };
 		503B86271BE889A500B2E3C5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 503B86251BE889A500B2E3C5 /* LaunchScreen.xib */; };
 		503B86331BE889A500B2E3C5 /* AndroidApplesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 503B86321BE889A500B2E3C5 /* AndroidApplesTests.m */; };
+		503B863E1BE88D3900B2E3C5 /* AndroidAppleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 503B863D1BE88D3900B2E3C5 /* AndroidAppleView.m */; };
+		CA0EE6723326732403C4EF01 /* libPods-AndroidApples.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 959C520C3092C0CF68692B7A /* libPods-AndroidApples.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,11 @@
 		503B862C1BE889A500B2E3C5 /* AndroidApplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AndroidApplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		503B86311BE889A500B2E3C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503B86321BE889A500B2E3C5 /* AndroidApplesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AndroidApplesTests.m; sourceTree = "<group>"; };
+		503B863C1BE88D3900B2E3C5 /* AndroidAppleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidAppleView.h; sourceTree = "<group>"; };
+		503B863D1BE88D3900B2E3C5 /* AndroidAppleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndroidAppleView.m; sourceTree = "<group>"; };
+		89B7F63AE041219A25E04F9E /* Pods-AndroidApples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AndroidApples.release.xcconfig"; path = "Pods/Target Support Files/Pods-AndroidApples/Pods-AndroidApples.release.xcconfig"; sourceTree = "<group>"; };
+		959C520C3092C0CF68692B7A /* libPods-AndroidApples.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AndroidApples.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3541EDDE2C0779BEA06832E /* Pods-AndroidApples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AndroidApples.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AndroidApples/Pods-AndroidApples.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA0EE6723326732403C4EF01 /* libPods-AndroidApples.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +68,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0ADB5888F3568B437A16C476 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				959C520C3092C0CF68692B7A /* libPods-AndroidApples.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		503B860A1BE889A400B2E3C5 = {
 			isa = PBXGroup;
 			children = (
 				503B86151BE889A400B2E3C5 /* AndroidApples */,
 				503B862F1BE889A500B2E3C5 /* AndroidApplesTests */,
 				503B86141BE889A400B2E3C5 /* Products */,
+				5878455DCBB09ACC9B13C6CC /* Pods */,
+				0ADB5888F3568B437A16C476 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +103,8 @@
 				503B861B1BE889A500B2E3C5 /* AppDelegate.m */,
 				503B861D1BE889A500B2E3C5 /* ViewController.h */,
 				503B861E1BE889A500B2E3C5 /* ViewController.m */,
+				503B863C1BE88D3900B2E3C5 /* AndroidAppleView.h */,
+				503B863D1BE88D3900B2E3C5 /* AndroidAppleView.m */,
 				503B86201BE889A500B2E3C5 /* Main.storyboard */,
 				503B86231BE889A500B2E3C5 /* Images.xcassets */,
 				503B86251BE889A500B2E3C5 /* LaunchScreen.xib */,
@@ -119,6 +139,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5878455DCBB09ACC9B13C6CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3541EDDE2C0779BEA06832E /* Pods-AndroidApples.debug.xcconfig */,
+				89B7F63AE041219A25E04F9E /* Pods-AndroidApples.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +155,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 503B86361BE889A500B2E3C5 /* Build configuration list for PBXNativeTarget "AndroidApples" */;
 			buildPhases = (
+				33A367F279178F1BE94545E3 /* Check Pods Manifest.lock */,
 				503B860F1BE889A400B2E3C5 /* Sources */,
 				503B86101BE889A400B2E3C5 /* Frameworks */,
 				503B86111BE889A400B2E3C5 /* Resources */,
+				FE03AFD67BBA45D0D042325C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,6 +245,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		33A367F279178F1BE94545E3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FE03AFD67BBA45D0D042325C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AndroidApples/Pods-AndroidApples-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		503B860F1BE889A400B2E3C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -222,6 +286,7 @@
 				503B861F1BE889A500B2E3C5 /* ViewController.m in Sources */,
 				503B861C1BE889A500B2E3C5 /* AppDelegate.m in Sources */,
 				503B86191BE889A400B2E3C5 /* main.m in Sources */,
+				503B863E1BE88D3900B2E3C5 /* AndroidAppleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +410,7 @@
 		};
 		503B86371BE889A500B2E3C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3541EDDE2C0779BEA06832E /* Pods-AndroidApples.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AndroidApples/Info.plist;
@@ -355,6 +421,7 @@
 		};
 		503B86381BE889A500B2E3C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89B7F63AE041219A25E04F9E /* Pods-AndroidApples.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AndroidApples/Info.plist;
@@ -416,6 +483,7 @@
 				503B86381BE889A500B2E3C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		503B86391BE889A500B2E3C5 /* Build configuration list for PBXNativeTarget "AndroidApplesTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +492,7 @@
 				503B863B1BE889A500B2E3C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

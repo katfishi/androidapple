@@ -1,0 +1,1 @@
+PODS_ANDROIDAPPLES_REACT_OTHER_LDFLAGS = -framework "JavaScriptCore"
