@@ -14,9 +14,16 @@ var AndroidApple = React.createClass ({
   },
 
   render: function() {
+    var androidAppleView;
+    if (this.state.isAndroid) {
+      androidAppleView = <Text>Android!</Text>
+    } else {
+      androidAppleView = <Text>Apple!</Text>
+    }
+
     return (
       <View style={styles.container}>
-        <Text>Android!</Text>
+        {androidAppleView}
       </View>
     )
   }
