@@ -3,6 +3,7 @@
 
 target 'AndroidApples' do
   pod 'React'
+  pod 'React/RCTText'
   pod 'React/RCTWebSocket'
 end
 
