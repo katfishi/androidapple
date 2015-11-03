@@ -7,10 +7,16 @@ var {
 } = React;
 
 var AndroidApple = React.createClass ({
+  getInitialState: function() {
+    return {
+      isAndroid: this.props.isAndroid
+    }
+  },
+
   render: function() {
     return (
       <View style={styles.container}>
-        <Text>Hello!</Text>
+        <Text>Android!</Text>
       </View>
     )
   }

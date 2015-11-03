@@ -14,9 +14,11 @@
 - (void)awakeFromNib {
     NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle"];
     
+    NSDictionary *initialProps = [[NSDictionary alloc] initWithObjectsAndKeys:@YES, @"isAndroid", nil];
+    
     RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                         moduleName:@"AndroidApple"
-                                                 initialProperties:nil
+                                                 initialProperties:initialProps
                                                      launchOptions:nil];
     [self addSubview:rootView];
     rootView.frame = self.bounds;
